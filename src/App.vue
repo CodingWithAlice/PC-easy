@@ -2,20 +2,20 @@
   <div class="page-wrap">
     <!-- 主体 -->
     <section class="cate-wrap">
-      <div v-for="(cate, cateIndex) in list"
-           :key="cateIndex"
-           class="cate">
-        <p class="cate-title">{{ cate.category }}</p>
+      <div v-for="(cate, cateIndex) in list" :key="cateIndex" class="cate">
+        <div class="cate-title">
+          <p>{{ cate.category }}</p>
+        </div>
         <div class="item-wrap">
-          <div v-for="(item, index) in cate.productList"
-               :key="index"
-               :class="['item', index % 3 === 0 ? '' : 'right']">
-            <img :src="item.img"
-                 class="item-img" />
+          <div
+            v-for="(item, index) in cate.productList"
+            :key="index"
+            class="item"
+          >
+            <img :src="item.img" class="item-img" />
             <p class="item-title">{{ item.title }}</p>
           </div>
         </div>
-
       </div>
     </section>
   </div>
@@ -31,8 +31,8 @@ export default {
   },
   data() {
     return {
-      list: '',
-    }
+      list: ''
+    };
   },
   created() {
     this.init();
@@ -47,143 +47,152 @@ export default {
               img: 'https://s3.ax1x.com/2020/12/04/DqaRje.jpg',
               title: 'JSON格式化',
               targetUrl: '#',
-              intro: '略',
+              intro: '略'
             },
             {
               img: 'https://s3.ax1x.com/2020/12/04/DqaRje.jpg',
               title: 'JSON格式化',
               targetUrl: '#',
-              intro: '略',
+              intro: '略'
             },
             {
               img: 'https://s3.ax1x.com/2020/12/04/DqaRje.jpg',
               title: 'JSON格式化',
               targetUrl: '#',
-              intro: '略',
+              intro: '略'
             },
             {
               img: 'https://s3.ax1x.com/2020/12/04/DqaRje.jpg',
               title: 'JSON格式化',
               targetUrl: '#',
-              intro: '略',
+              intro: '略'
             },
             {
               img: 'https://s3.ax1x.com/2020/12/04/DqaRje.jpg',
               title: 'JSON格式化',
               targetUrl: '#',
-              intro: '略',
+              intro: '略'
             }
           ]
         },
         {
           category: '分类2',
-          productList: [{
-            img: 'https://s3.ax1x.com/2020/12/04/DqaRje.jpg',
-            title: 'JSON格式化',
-            targetUrl: '#',
-            intro: '略',
-          },
-          {
-            img: 'https://s3.ax1x.com/2020/12/04/DqaRje.jpg',
-            title: 'JSON格式化',
-            targetUrl: '#',
-            intro: '略',
-          },
-          {
-            img: 'https://s3.ax1x.com/2020/12/04/DqaRje.jpg',
-            title: 'JSON格式化',
-            targetUrl: '#',
-            intro: '略',
-          },
+          productList: [
+            {
+              img: 'https://s3.ax1x.com/2020/12/04/DqaRje.jpg',
+              title: 'JSON格式化',
+              targetUrl: '#',
+              intro: '略'
+            },
+            {
+              img: 'https://s3.ax1x.com/2020/12/04/DqaRje.jpg',
+              title: 'JSON格式化',
+              targetUrl: '#',
+              intro: '略'
+            },
+            {
+              img: 'https://s3.ax1x.com/2020/12/04/DqaRje.jpg',
+              title: 'JSON格式化',
+              targetUrl: '#',
+              intro: '略'
+            }
           ]
         },
         {
           category: '分类3',
-          productList: [{
-            img: 'https://s3.ax1x.com/2020/12/04/DqaRje.jpg',
-            title: 'JSON格式化',
-            targetUrl: '#',
-            intro: '略',
-          },
-          {
-            img: 'https://s3.ax1x.com/2020/12/04/DqaRje.jpg',
-            title: 'JSON格式化',
-            targetUrl: '#',
-            intro: '略',
-          },
-          {
-            img: 'https://s3.ax1x.com/2020/12/04/DqaRje.jpg',
-            title: 'JSON格式化',
-            targetUrl: '#',
-            intro: '略',
-          },
+          productList: [
+            {
+              img: 'https://s3.ax1x.com/2020/12/04/DqaRje.jpg',
+              title: 'JSON格式化',
+              targetUrl: '#',
+              intro: '略'
+            },
+            {
+              img: 'https://s3.ax1x.com/2020/12/04/DqaRje.jpg',
+              title: 'JSON格式化',
+              targetUrl: '#',
+              intro: '略'
+            },
+            {
+              img: 'https://s3.ax1x.com/2020/12/04/DqaRje.jpg',
+              title: 'JSON格式化',
+              targetUrl: '#',
+              intro: '略'
+            }
           ]
         },
         {
           category: '分类4',
-          productList: [{
-            img: 'https://s3.ax1x.com/2020/12/04/DqaRje.jpg',
-            title: 'JSON格式化',
-            targetUrl: '#',
-            intro: '略',
-          },
-          {
-            img: 'https://s3.ax1x.com/2020/12/04/DqaRje.jpg',
-            title: 'JSON格式化',
-            targetUrl: '#',
-            intro: '略',
-          },
-          {
-            img: 'https://s3.ax1x.com/2020/12/04/DqaRje.jpg',
-            title: 'JSON格式化',
-            targetUrl: '#',
-            intro: '略',
-          },
+          productList: [
+            {
+              img: 'https://s3.ax1x.com/2020/12/04/DqaRje.jpg',
+              title: 'JSON格式化',
+              targetUrl: '#',
+              intro: '略'
+            },
+            {
+              img: 'https://s3.ax1x.com/2020/12/04/DqaRje.jpg',
+              title: 'JSON格式化',
+              targetUrl: '#',
+              intro: '略'
+            },
+            {
+              img: 'https://s3.ax1x.com/2020/12/04/DqaRje.jpg',
+              title: 'JSON格式化',
+              targetUrl: '#',
+              intro: '略'
+            }
           ]
-        },
-
+        }
       ];
-    },
-  },
-}
+    }
+  }
+};
 </script>
 
 <style lang="less">
 body {
-    margin: 0;
-    padding: 0;
-};
-.page-wrap {
+  margin: 0;
+  padding: 0;
   background-color: #131417;
 }
+.page-wrap {
+  padding-top: 80px;
+}
 .cate-wrap {
-  width: 1180px;
+  width: 960px;
   margin: 0 auto;
-  display: flex;
-  flex-direction: column;
   color: #fff;
   .cate {
-    display: flex;
-    flex-direction: column;
+    margin-bottom: 50px;
+    .cate-title {
+      margin: 10px 21px;
+      p {
+        font-size: 25px;
+        margin-bottom: 10px;
+      }
+      border-bottom: 1px solid #2c303a;
+    }
     .item-wrap {
       display: flex;
       flex-wrap: wrap;
       .item {
-        margin-top: 10px;
-        padding: 10px;
+        margin: 21px 21px;
+        padding: 12px;
         display: flex;
         flex-direction: column;
         align-items: center;
-        border-radius: 10px;
-        background-color: #2C303A;
+        border-radius: 5px;
+        background-color: #2c303a;
         .item-img {
-            width: 300px;
-            height: 240px;
-            border-radius: 5px;
+          width: 250px;
+          height: 160px;
+          border-radius: 3px;
         }
-      }
-      .right {
-          margin-left: 110px;
+        .item-title {
+          margin: 10px 0px auto;
+          font-size: 15px;
+        }
       }
     }
   }
