@@ -11,9 +11,13 @@
             v-for="(item, index) in cate.productList"
             :key="index"
             class="item"
+            @click="goDetail(item.targetUrl)"
+            @mouseenter="enter(item)"
+            @mouseleave="leave(item)"
           >
             <img :src="item.img" class="item-img" />
             <p class="item-title">{{ item.title }}</p>
+            <span v-if="item.show" class="intro">{{ item.intro }}</span>
           </div>
         </div>
       </div>
@@ -47,25 +51,29 @@ export default {
               img: 'https://s3.ax1x.com/2020/12/04/DqaRje.jpg',
               title: 'JSON格式化',
               targetUrl: '#',
-              intro: '略'
+              intro: '这是一个简单的提示',
+              show: false,
             },
             {
               img: 'https://s3.ax1x.com/2020/12/05/DqWR00.md.jpg',
               title: 'MD笔记',
               targetUrl: '#',
-              intro: '略'
+              intro: '略',
+              show: false,
             },
             {
               img: 'https://s3.ax1x.com/2020/12/05/DqWylj.md.jpg',
               title: '时间戳转换',
               targetUrl: '#',
-              intro: '略'
+              intro: '略',
+              show: false,
             },
             {
               img: 'https://s3.ax1x.com/2020/12/05/DqW2mq.md.jpg',
               title: '颜色选取',
               targetUrl: '#',
-              intro: '略'
+              intro: '略',
+              show: false,
             }
           ]
         },
@@ -76,19 +84,22 @@ export default {
               img: 'https://s3.ax1x.com/2020/12/04/DqaRje.jpg',
               title: 'JSON格式化',
               targetUrl: '#',
-              intro: '略'
+              intro: '略',
+              show: false,
             },
             {
               img: 'https://s3.ax1x.com/2020/12/04/DqaRje.jpg',
               title: 'JSON格式化',
               targetUrl: '#',
-              intro: '略'
+              intro: '略',
+              show: false,
             },
             {
               img: 'https://s3.ax1x.com/2020/12/04/DqaRje.jpg',
               title: 'JSON格式化',
               targetUrl: '#',
-              intro: '略'
+              intro: '略',
+              show: false,
             }
           ]
         },
@@ -99,19 +110,22 @@ export default {
               img: 'https://s3.ax1x.com/2020/12/04/DqaRje.jpg',
               title: 'JSON格式化',
               targetUrl: '#',
-              intro: '略'
+              intro: '略',
+              show: false,
             },
             {
               img: 'https://s3.ax1x.com/2020/12/04/DqaRje.jpg',
               title: 'JSON格式化',
               targetUrl: '#',
-              intro: '略'
+              intro: '略',
+              show: false,
             },
             {
               img: 'https://s3.ax1x.com/2020/12/04/DqaRje.jpg',
               title: 'JSON格式化',
               targetUrl: '#',
-              intro: '略'
+              intro: '略',
+              show: false,
             }
           ]
         },
@@ -122,24 +136,36 @@ export default {
               img: 'https://s3.ax1x.com/2020/12/04/DqaRje.jpg',
               title: 'JSON格式化',
               targetUrl: '#',
-              intro: '略'
+              intro: '略',
+              show: false,
             },
             {
               img: 'https://s3.ax1x.com/2020/12/04/DqaRje.jpg',
               title: 'JSON格式化',
               targetUrl: '#',
-              intro: '略'
+              intro: '略',
+              show: false,
             },
             {
               img: 'https://s3.ax1x.com/2020/12/04/DqaRje.jpg',
               title: 'JSON格式化',
               targetUrl: '#',
-              intro: '略'
+              intro: '略',
+              show: false,
             }
           ]
         }
       ];
-    }
+    },
+    goDetail(url) {
+        location.href = url;
+    },
+    enter(item) {
+        item.show = true;
+    },
+    leave(item) {
+        item.show = false;
+    },
   }
 };
 </script>
@@ -174,9 +200,6 @@ body {
       .item {
         cursor: pointer;
         transition: all 0.2s;
-        &:hover {
-          transform: scale(1.02);
-        }
         margin: 20px 20px;
         padding: 15px;
         display: flex;
@@ -184,6 +207,10 @@ body {
         align-items: center;
         border-radius: 5px;
         background-color: #2c303a;
+        position: relative;
+        &:hover {
+          transform: scale(1.02);
+        }
         .item-img {
           width: 250px;
           height: 160px;
@@ -192,6 +219,20 @@ body {
         .item-title {
           margin: 10px 0px auto;
           font-size: 15px;
+        }
+        .intro {
+            background-color: #ccc;
+            position: absolute;
+            top: 50%;
+            right: 10%;
+            color: #333;
+            font-size: 12px;
+            height: 16px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 0 4px;
+            border-radius: 4px;
         }
       }
     }
