@@ -41,7 +41,7 @@ export default {
     init() {
       this.list = [
         {
-          category: '分类1',
+          category: '作品集',
           productList: [
             {
               img: 'https://s3.ax1x.com/2020/12/04/DqaRje.jpg',
@@ -160,8 +160,9 @@ body {
   .cate {
     margin-bottom: 50px;
     .cate-title {
-      margin: 10px 21px;
+      margin: 10px 20px;
       p {
+        margin-left: 5px;
         font-size: 25px;
         margin-bottom: 10px;
       }
@@ -171,8 +172,8 @@ body {
       display: flex;
       flex-wrap: wrap;
       .item {
-        margin: 21px 21px;
-        padding: 12px;
+        margin: 20px 20px;
+        padding: 15px;
         display: flex;
         flex-direction: column;
         align-items: center;
