@@ -60,6 +60,18 @@ export default {
               title: 'JSON格式化',
               targetUrl: '#',
               intro: '略',
+            },
+            {
+              img: 'https://s3.ax1x.com/2020/12/04/DqaRje.jpg',
+              title: 'JSON格式化',
+              targetUrl: '#',
+              intro: '略',
+            },
+            {
+              img: 'https://s3.ax1x.com/2020/12/04/DqaRje.jpg',
+              title: 'JSON格式化',
+              targetUrl: '#',
+              intro: '略',
             }
           ]
         },
@@ -151,18 +163,19 @@ export default {
     flex-direction: column;
     .item-wrap {
       display: flex;
-      justify-content: space-between;
+      flex-wrap: wrap;
       .item {
-        width: 25%;
+        margin: 10px 0 0 15px;
+        padding: 10px;
         display: flex;
         flex-direction: column;
         align-items: center;
-        border-radius: 15px;
+        border-radius: 10px;
         background-color: #2C303A;
         .item-img {
-            margin-top: 5%;
-            width: 90%;
-            border-radius: 10px;
+            width: 300px;
+            height: 240px;
+            border-radius: 5px;
         }
       }
     }
