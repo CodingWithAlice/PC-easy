@@ -172,6 +172,11 @@ body {
       display: flex;
       flex-wrap: wrap;
       .item {
+        cursor: pointer;
+        transition: all 0.2s;
+        &:hover {
+          transform: scale(1.02);
+        }
         margin: 20px 20px;
         padding: 15px;
         display: flex;
