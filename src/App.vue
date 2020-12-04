@@ -9,7 +9,7 @@
         <div class="item-wrap">
           <div v-for="(item, index) in cate.productList"
                :key="index"
-               class="item">
+               :class="['item', index % 3 === 0 ? '' : 'right']">
             <img :src="item.img"
                  class="item-img" />
             <p class="item-title">{{ item.title }}</p>
@@ -148,12 +148,16 @@ export default {
 }
 </script>
 
-<style lang="less" scoped>
+<style lang="less">
+body {
+    margin: 0;
+    padding: 0;
+};
 .page-wrap {
   background-color: #131417;
 }
 .cate-wrap {
-  width: 80%;
+  width: 1180px;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
@@ -165,7 +169,7 @@ export default {
       display: flex;
       flex-wrap: wrap;
       .item {
-        margin: 10px 0 0 15px;
+        margin-top: 10px;
         padding: 10px;
         display: flex;
         flex-direction: column;
@@ -177,6 +181,9 @@ export default {
             height: 240px;
             border-radius: 5px;
         }
+      }
+      .right {
+          margin-left: 110px;
       }
     }
   }
