@@ -16,8 +16,8 @@
             @mouseleave="leave(item)"
           >
             <img :src="item.img" class="item-img" />
-            <p class="item-title">{{ item.title }}</p>
-            <span v-if="item.show" class="intro">{{ item.intro }}</span>
+            <p v-if="!item.show" class="item-title">{{ item.title }}</p>
+            <p v-if="item.show" class="item-intro">{{ item.intro }}</p>
           </div>
         </div>
       </div>
@@ -52,28 +52,28 @@ export default {
               title: 'JSON格式化',
               targetUrl: '#',
               intro: '这是一个简单的提示',
-              show: false,
+              show: false
             },
             {
               img: 'https://s3.ax1x.com/2020/12/05/DqWR00.md.jpg',
               title: 'MD笔记',
               targetUrl: '#',
               intro: '略',
-              show: false,
+              show: false
             },
             {
               img: 'https://s3.ax1x.com/2020/12/05/DqWylj.md.jpg',
               title: '时间戳转换',
               targetUrl: '#',
               intro: '略',
-              show: false,
+              show: false
             },
             {
               img: 'https://s3.ax1x.com/2020/12/05/DqW2mq.md.jpg',
               title: '颜色选取',
               targetUrl: '#',
               intro: '略',
-              show: false,
+              show: false
             }
           ]
         },
@@ -85,21 +85,21 @@ export default {
               title: 'JSON格式化',
               targetUrl: '#',
               intro: '略',
-              show: false,
+              show: false
             },
             {
               img: 'https://s3.ax1x.com/2020/12/04/DqaRje.jpg',
               title: 'JSON格式化',
               targetUrl: '#',
               intro: '略',
-              show: false,
+              show: false
             },
             {
               img: 'https://s3.ax1x.com/2020/12/04/DqaRje.jpg',
               title: 'JSON格式化',
               targetUrl: '#',
               intro: '略',
-              show: false,
+              show: false
             }
           ]
         },
@@ -111,21 +111,21 @@ export default {
               title: 'JSON格式化',
               targetUrl: '#',
               intro: '略',
-              show: false,
+              show: false
             },
             {
               img: 'https://s3.ax1x.com/2020/12/04/DqaRje.jpg',
               title: 'JSON格式化',
               targetUrl: '#',
               intro: '略',
-              show: false,
+              show: false
             },
             {
               img: 'https://s3.ax1x.com/2020/12/04/DqaRje.jpg',
               title: 'JSON格式化',
               targetUrl: '#',
               intro: '略',
-              show: false,
+              show: false
             }
           ]
         },
@@ -137,35 +137,35 @@ export default {
               title: 'JSON格式化',
               targetUrl: '#',
               intro: '略',
-              show: false,
+              show: false
             },
             {
               img: 'https://s3.ax1x.com/2020/12/04/DqaRje.jpg',
               title: 'JSON格式化',
               targetUrl: '#',
               intro: '略',
-              show: false,
+              show: false
             },
             {
               img: 'https://s3.ax1x.com/2020/12/04/DqaRje.jpg',
               title: 'JSON格式化',
               targetUrl: '#',
               intro: '略',
-              show: false,
+              show: false
             }
           ]
         }
       ];
     },
     goDetail(url) {
-        location.href = url;
+      location.href = url;
     },
     enter(item) {
-        item.show = true;
+      item.show = true;
     },
     leave(item) {
-        item.show = false;
-    },
+      item.show = false;
+    }
   }
 };
 </script>
@@ -209,7 +209,7 @@ body {
         background-color: #2c303a;
         position: relative;
         &:hover {
-          transform: scale(1.02);
+          transform: scale(1.03);
         }
         .item-img {
           width: 250px;
@@ -220,19 +220,11 @@ body {
           margin: 10px 0px auto;
           font-size: 15px;
         }
-        .intro {
-            background-color: #ccc;
-            position: absolute;
-            top: 50%;
-            right: 10%;
-            color: #333;
-            font-size: 12px;
-            height: 16px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding: 0 4px;
-            border-radius: 4px;
+        .item-intro {
+          position: absolute;
+          top: 175px;
+          color: rgb(200, 200, 200);
+          font-size: 13px;
         }
       }
     }
