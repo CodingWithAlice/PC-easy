@@ -1,5 +1,8 @@
 <template>
   <div class="page-wrap">
+    <div class="header-img">
+      <img src="https://media.giphy.com/media/3o6Ztj6n6THmbi329y/giphy.gif" />
+    </div>
     <!-- 主体 -->
     <section class="cate-wrap">
       <div v-for="(cate, cateIndex) in list" :key="cateIndex" class="cate">
@@ -45,110 +48,65 @@ export default {
     init() {
       this.list = [
         {
-          category: '作品集',
+          category: '前端作品集',
           productList: [
             {
-              img: 'https://s3.ax1x.com/2020/12/04/DqaRje.jpg',
-              title: 'JSON格式化',
+              img: 'https://s3.ax1x.com/2020/12/05/DLMA4H.png',
+              title: 'TodoList',
               targetUrl: '#',
-              intro: '这是一个简单的提示',
+              intro: 'Vue实现的待办事项',
               show: false
             },
             {
-              img: 'https://s3.ax1x.com/2020/12/05/DqWR00.md.jpg',
-              title: 'MD笔记',
+              img: 'https://s3.ax1x.com/2020/12/05/DLMZ8A.jpg',
+              title: 'Timeline Notes',
               targetUrl: '#',
-              intro: '略',
+              intro: '以时间线记录的笔记',
               show: false
             },
             {
-              img: 'https://s3.ax1x.com/2020/12/05/DqWylj.md.jpg',
-              title: '时间戳转换',
+              img: 'https://s3.ax1x.com/2020/12/05/DLMuKP.jpg',
+              title: '网址导航',
               targetUrl: '#',
-              intro: '略',
+              intro: '每个人应该有个自己的导航网址',
               show: false
             },
             {
-              img: 'https://s3.ax1x.com/2020/12/05/DqW2mq.md.jpg',
-              title: '颜色选取',
+              img: 'https://s3.ax1x.com/2020/12/05/DLM1Ug.jpg',
+              title: 'idea收集',
               targetUrl: '#',
-              intro: '略',
+              intro: '不要放掉一个闪念',
+              show: false
+            },
+            {
+              img: 'https://s3.ax1x.com/2020/12/05/DLNjcF.jpg',
+              title: 'Fliqlo在线版',
+              targetUrl: '#',
+              intro: 'web版翻页时钟',
               show: false
             }
           ]
         },
         {
-          category: '分类2',
+          category: 'TODO...',
           productList: [
             {
-              img: 'https://s3.ax1x.com/2020/12/04/DqaRje.jpg',
-              title: 'JSON格式化',
+              img: 'https://s3.ax1x.com/2020/12/05/DLKm0U.jpg',
+              title: '...',
               targetUrl: '#',
               intro: '略',
               show: false
             },
             {
-              img: 'https://s3.ax1x.com/2020/12/04/DqaRje.jpg',
-              title: 'JSON格式化',
+              img: 'https://s3.ax1x.com/2020/12/05/DLKm0U.jpg',
+              title: '...',
               targetUrl: '#',
               intro: '略',
               show: false
             },
             {
-              img: 'https://s3.ax1x.com/2020/12/04/DqaRje.jpg',
-              title: 'JSON格式化',
-              targetUrl: '#',
-              intro: '略',
-              show: false
-            }
-          ]
-        },
-        {
-          category: '分类3',
-          productList: [
-            {
-              img: 'https://s3.ax1x.com/2020/12/04/DqaRje.jpg',
-              title: 'JSON格式化',
-              targetUrl: '#',
-              intro: '略',
-              show: false
-            },
-            {
-              img: 'https://s3.ax1x.com/2020/12/04/DqaRje.jpg',
-              title: 'JSON格式化',
-              targetUrl: '#',
-              intro: '略',
-              show: false
-            },
-            {
-              img: 'https://s3.ax1x.com/2020/12/04/DqaRje.jpg',
-              title: 'JSON格式化',
-              targetUrl: '#',
-              intro: '略',
-              show: false
-            }
-          ]
-        },
-        {
-          category: '分类4',
-          productList: [
-            {
-              img: 'https://s3.ax1x.com/2020/12/04/DqaRje.jpg',
-              title: 'JSON格式化',
-              targetUrl: '#',
-              intro: '略',
-              show: false
-            },
-            {
-              img: 'https://s3.ax1x.com/2020/12/04/DqaRje.jpg',
-              title: 'JSON格式化',
-              targetUrl: '#',
-              intro: '略',
-              show: false
-            },
-            {
-              img: 'https://s3.ax1x.com/2020/12/04/DqaRje.jpg',
-              title: 'JSON格式化',
+              img: 'https://s3.ax1x.com/2020/12/05/DLKm0U.jpg',
+              title: '...',
               targetUrl: '#',
               intro: '略',
               show: false
@@ -176,10 +134,18 @@ body {
   padding: 0;
   background-color: #131417;
 }
-.page-wrap {
-  padding-top: 80px;
+
+.header-img {
+  width: 100%;
+  img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+  }
 }
+
 .cate-wrap {
+  padding-top: 80px;
   width: 960px;
   margin: 0 auto;
   color: #fff;
@@ -198,10 +164,12 @@ body {
       display: flex;
       flex-wrap: wrap;
       .item {
+        width: 250px;
+        height: 190px;
         cursor: pointer;
         transition: all 0.2s;
         margin: 20px 20px;
-        padding: 15px;
+        padding: 10px;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -222,7 +190,7 @@ body {
         }
         .item-intro {
           position: absolute;
-          top: 175px;
+          top: 167px;
           color: rgb(200, 200, 200);
           font-size: 13px;
         }
