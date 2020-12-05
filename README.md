@@ -1,24 +1,6 @@
-# hello-world
+# 项目展示页
 
-## Project setup
-```
-npm install
-```
+## 待办
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
-
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+- 网页头部导航组件
+- 网页尾部组件
